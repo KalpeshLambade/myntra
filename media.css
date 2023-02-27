@@ -33,7 +33,7 @@
     }
     #t-shirt-left{
         width:100%;
-        height:12%
+        height:20%
     }
     #t-shirt-left >div{
         display: none;
@@ -65,5 +65,92 @@
     #t-shirt-right-first >p:nth-child(3){
         display: none;
     }
+    #t-shirt-right-second{
+        height: 3%;
+    }
+    #t-shirt-right-second >div:nth-child(1){
+        width:60%;
+    }
+    #t-shirt-right-second >div:nth-child(1)>p:nth-child(1),
+    #t-shirt-right-second >div:nth-child(1)>p:nth-child(2)
+    ,#t-shirt-right-second >div:nth-child(1)>p:nth-child(3) {
+        font-size:3vw;
+    }
+    #t-shirt-right-second >div:nth-child(2) >p{
+        font-size: 3vw;
+    }
+    #t-shirt-right-third{
+        height: fit-content;
+    }
+    #t-shirt-right-third >div:nth-child(1){
+        width:95%;
+        padding: 10px 0;
+        margin:auto;
+        justify-content: space-between;
+    }
+    #t-shirt-right-third >div:nth-child(1) >p:nth-child(1),#t-shirt-right-third >div:nth-child(1) >p:nth-child(2){
+        font-size: 2.5vw;
+    }
+    #t-shirt-right-third >div:nth-child(2){
+        height: 30%;
+        padding-bottom: 10px;
+    }
+    #t-shirt-right-third >div:nth-child(2)>div >p{
+        font-size: 3.5vw;
+    }
+    #t-shirt-right-third >div:nth-child(3){
+        display: none;
+    }
+    #t-shirt-right-fourth{
+        height:12%;
+    }
+    .dilivery-names>p:nth-child(2), .dilivery-names>i{
+        display: none;
+    }
+    #dilivery-option >div:nth-child(2){
+        height:12%;
+        width:60%;
+    }
+    #dilivery-option >div:nth-child(2) input, a{
+        font-size: 3vw;
+    }
+    .display{
+        display:unset;
+    }
+    .dilivery-names >p{
+        font-size: 3.25vw;
+    }
+    #dilivery-option >div:nth-child(3){
+
+    }
+    #dilivery-option >div:nth-child(3) >p{
+        display: none;
+    }
+    #dilivery-option >div:nth-child(3) >div>p{
+        font-size:3vw;
+    }
+    .offer-names{
+        display:none;
+    }
+    #best-offer >div:nth-child(2) >div:nth-child(3),#best-offer >div:nth-child(2) >div:nth-child(4){
+        display: none;
+    }
+    #best-offer >div:nth-child(2) >div:nth-child(1){
+        height:20%;
+        margin-top: 5%;
+    }
+    #best-offer >div:nth-child(2) >div:nth-child(2){
+        height: 70%;
+    }
+    #best-offer >div:nth-child(2) >div:nth-child(1) >p{
+        font-size: 3.5vw;
+    }
+    #best-offer >div:nth-child(2) >div:nth-child(2) >ul{
+        font-size: 3.2vw;
+        line-height: 20px;
+    }
+
+
+
 
 }

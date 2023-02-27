@@ -116,7 +116,7 @@
     width:100%;
 }
 #t-shirt-right{
-    /* border:1px solid red; */
+    border:1px solid red;
     width:39%;
     height:100%;
 }
@@ -207,7 +207,7 @@
     color:#ff3e6c;  
 }
 #t-shirt-right-third >div:nth-child(2){
-    /* border:1px solid orange;  */
+    /* border:1px solid blueviolet;  */
     height:35%;
     display:flex;
     justify-content: space-around;
@@ -256,22 +256,26 @@
     padding:0 9%;
 }
 #t-shirt-right-fourth{
-    border:1px solid orange; 
-    height:25%;
+    border-bottom:1px solid grey; 
+    height:29%;
+    margin: 2% 0;
 }
 #dilivery-option{
-    border:1px solid red;
+    /* border:1px solid red; */
     height:50%;
 }
-.dilivery-names{
+.dilivery-names, .offer-names{
     height: 10%;
     width:35%;
-    border:1px solid blue;
+    /* border:1px solid blue; */
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items:center;
-    font-size:1.5vw;
-    font-weight: 500;
+    font-size:1.6vw;
+    font-weight: bolder;
+}
+.display{
+    display: none;
 }
 #dilivery-option >div:nth-child(2){
     border:1px solid grey;
@@ -316,40 +320,49 @@
     color:rgb(40, 40, 40);
 }
 #best-offer {
-    border:1px solid red;
+    /* border:1px solid red; */
     height: 50%;
 }
 #best-offer >div:nth-child(2){
     height:90%;
 }
 #best-offer >div:nth-child(2) >div:nth-child(1){
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
     height:10%;
     margin: 2% 0;
+}
+#best-offer >div:nth-child(2) >div:nth-child(1) strong{
+    color:orangered;
 }
 #best-offer >div:nth-child(2) >div:nth-child(1) >p{
     font-size: 1.2vw;
     padding: 0.2% 0;
 }
 #best-offer >div:nth-child(2) >div:nth-child(2){
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
     height:30%;
     width:93%;
     margin: 1% auto;
     padding:1%;
 }
 #best-offer >div:nth-child(2) >div:nth-child(2) >ul{
-    font-size:1.3vw;
+    font-size:1.2vw;
+    line-height: 28px;
 }
 #best-offer >div:nth-child(2) >div:nth-child(3){
     color:#ff3e6c;
     font-size: 1.2vw;
-    padding:0.5% 1%;
+    padding:1% 1% 2% 1%;
 }
 #best-offer >div:nth-child(2) >div:nth-child(4){
-    border:1px solid purple;
+    /* border:1px solid purple; */
     width:94%;
     margin:auto;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
 }
 #best-offer >div:nth-child(2) >div:nth-child(4) >p{
     font-size:1.125vw;
@@ -359,5 +372,9 @@
     color:#ff3e6c;
 }
 #best-offer >div:nth-child(2) >div:nth-child(4) >ul{
-    font-size:1.2vw;
+    font-size:1.1vw;
+    font-weight: lighter;
+}
+#product-details{
+
 }
