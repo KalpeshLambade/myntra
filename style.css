@@ -4,7 +4,7 @@
 }
 #full-page{
     width:100%;
-    height:500vh;
+    height:600vh;
     border:1px solid red;
 }
 #navbar{
@@ -19,7 +19,7 @@
     background-color: white;
 }
 #nav-logo{
-    width:8%;
+    width:7%;
     height:70%;
     /* border:1px solid blue; */
 }
@@ -89,7 +89,7 @@
     justify-content: space-evenly;
 }
 #t-shirt >div:nth-child(1){
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
     width: 100%;
     height: 3%;
     display: flex;
@@ -100,7 +100,7 @@
     padding: 0 2%;
 }
 #t-shirt-left{
-    border:1px solid tomato;
+    /* border:1px solid tomato; */
     width: 55%;
     height: 60%;
     display: flex;
@@ -116,9 +116,9 @@
     width:100%;
 }
 #t-shirt-right{
-    border:1px solid red;
+    /* border:1px solid red; */
     width:39%;
-    height:100%;
+    height:97%;
 }
 #t-shirt-right-first{
     height: 5%;
@@ -186,7 +186,7 @@
 }
 #t-shirt-right-third{
     border-bottom:1px solid grey;
-    height:8%;
+    height:6%;
     width:100%;
 }
 #t-shirt-right-third >div:nth-child(1){
@@ -257,7 +257,7 @@
 }
 #t-shirt-right-fourth{
     border-bottom:1px solid grey; 
-    height:29%;
+    height:22%;
     margin: 2% 0;
 }
 #dilivery-option{
@@ -293,10 +293,12 @@
     border: none;
     outline:none;
     border-radius: 5px 0 0 5px;
+    font-size: 1vw;
 }
 #dilivery-option >div:nth-child(2) >a{
     width:20%;
     color:#ff3e6c;
+    font-size:1.5vw;
 }
 #dilivery-option >div:nth-child(3){
     /* border:1px solid blue; */
@@ -347,7 +349,6 @@
 }
 #best-offer >div:nth-child(2) >div:nth-child(2) >ul{
     font-size:1.2vw;
-    line-height: 28px;
 }
 #best-offer >div:nth-child(2) >div:nth-child(3){
     color:#ff3e6c;
@@ -376,5 +377,231 @@
     font-weight: lighter;
 }
 #product-details{
-
+    /* border :1px solid blue; */
+    height:20%;
 }
+#product-details >div:nth-child(1){
+    /* border :1px solid blue; */
+    height:40%;
+}
+.product-text{
+    /* border :1px solid red; */
+    padding: 0.8% 0;
+}
+.product-text >p, .product-text >h5{
+    font-size:1.2vw;
+}
+.product-text >h5{
+    padding:3px 0;
+}
+#product-details >div:nth-child(2){
+    /* border:1px solid tomato; */
+    height:60%;
+}
+#product-details >div:nth-child(2) >div:nth-child(1),#product-details >div:nth-child(2) >div:nth-child(3){
+    height:10%;
+}
+#product-details >div:nth-child(2) >div:nth-child(1)>p{
+    font-size:1.2vw;
+    font-weight:bolder;
+    padding: 1% 0;
+}
+#product-details >div:nth-child(2) >div:nth-child(2){
+    height:80%;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+#product-details >div:nth-child(2) >div:nth-child(2) >div{
+    height:25%;
+    width:48%;
+    border-bottom :1px solid rgb(204, 203, 203);
+}
+#product-details >div:nth-child(2) >div:nth-child(2) >div>p:nth-child(1){
+    font-size:1vw;
+    padding:1% 0;
+}
+#product-details >div:nth-child(2) >div:nth-child(2) >div>p:nth-child(2){
+    font-size:1.25vw;
+}
+#product-details >div:nth-child(2) >div:nth-child(3)>p{
+    color:#ff3e6c;
+    font-size:1.2vw;
+    padding:1% 0;
+}
+#ratings{
+    border-bottom:1px solid grey;
+    height:12%;
+    margin: 2% 0;
+    padding-bottom: 1%;
+}
+#ratings >h5{
+    height:11%;
+    font-size:1.3vw;
+}
+#ratings >div:nth-child(2){
+    height:30%;
+    margin: 2% 0;
+    /* border:1px solid blue; */
+    display:flex;
+    justify-content:space-around;
+}
+#ratings >div:nth-child(2) >div:nth-child(1){
+    width:40%;
+    border-right:1px solid grey;
+}
+#ratings >div:nth-child(2) >div:nth-child(1) >p:nth-child(1){
+    height:70%;
+    font-size:2.5vw;
+    /* border:1px solid red; */
+    padding: 0.2% 0;
+}
+#ratings >div:nth-child(2) >div:nth-child(1) >p:nth-child(1) >i{
+    color:green;
+    font-size:2vw;  
+}
+#ratings >div:nth-child(2) >div:nth-child(1) >p:nth-child(2){
+    font-size: 1.2vw;
+}
+#ratings >div:nth-child(2) >div:nth-child(2){
+    width:60%;
+    background-image:url("/rating.png") ;
+    background-size:100% 100%;
+}
+#ratings >div:nth-child(3){
+    /* border:1px solid blue;  */
+    padding: 1% 0;
+    height:40%;
+}
+#ratings >div:nth-child(3) >h5{
+    font-size:1.2vw;
+}
+#ratings >div:nth-child(3) >div{
+    height:80%;
+    width:80%;
+    margin:auto;
+    background-image: url("/customer-said.png");
+    background-size:100% 100%;
+}
+#ratings >p{
+    color:#ff3e6c;
+    font-size:1vw;
+    padding: 1% 0;
+}
+#reviews{
+    height:25%;
+    width:100%;
+    /* border:1px solid blue;  */
+}
+#reviews-top{
+    height: 25%;
+    /* border:1px solid blue;  */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+#reviews-top >p{
+    height:10%;
+    font-size:1.1vw;
+    font-weight: bold;
+    /* border:1px solid red;  */
+}
+.review-img{
+    height:60%;
+    /* border:1px solid pink; */
+    display:flex;
+    justify-content:space-evenly
+}
+.review-img >div{
+    width:20%;
+}
+.review-img >div:last-child{
+    background-image: url("https://assets.myntassets.com/h_150,q_75,w_150,c_thumb,fl_progressive/assets/images/2020/6/1/83e9e9dc-b1f6-467e-9eb6-667948a5536c1590998328201-IMG20200601100412.jpg");
+    background-size: 100% 100%;
+    opacity: 0.6;
+}
+.review-img >div:last-child >p{
+    width:50%;
+    margin:auto;
+    margin-top:40%;
+    font-size: 1.2vw;
+    font-weight: bolder;
+    color:red;
+}
+.review-img >div>img{
+    height:100%;
+    width:100%;
+}
+.reviews-bot{
+    /* border:1px solid blue;  */
+    height:25%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.reviews-bot >div:nth-child(1){
+    width:5%;
+    height:20%;
+    font-size:1.2vw;
+    background-color: green;
+    color:white;
+    /* align-self:center; */
+}
+.reviews-bot >div:nth-child(2){
+    width:90%;
+    height:34%;
+    /* border:1px solid blue;  */
+}
+.reviews-bot >div:nth-child(2) >p{
+    font-size: 1vw;
+    overflow-wrap: break-word;
+}
+.reviews-bot >div:nth-child(3){
+    /* border:1px solid tomato; */
+    width:40%;
+    height:50%;
+    display: flex;
+    justify-content: space-around;
+}
+.reviews-bot >div:nth-child(3) >div{
+    width:30%;
+}
+.reviews-bot >div:nth-child(3)>div >img{
+    height: 100%;
+    width:100%;
+}
+.reviews-bot >div:nth-child(4){
+    width:100%;
+}
+.reviews-bot >div:nth-child(4) >p{
+    font-size: 1.2vw;
+}
+#t-shirt-right >div:last-child{
+    /* border:1px solid tomato; */
+    height:3.8%;
+    padding: 2% 0;
+}
+#t-shirt-right >div:last-child >div:nth-child(1){
+    height:30%;
+    /* border:1px solid blue; */
+}
+#t-shirt-right >div:last-child >div:nth-child(1) >p{
+    font-size:1.2vw;
+    color:#ff3e6c;
+}
+#t-shirt-right >div:last-child >div:nth-child(2){
+    height:70%;
+}
+#t-shirt-right >div:last-child >div:nth-child(2) >p{
+    font-size: 1.2vw;
+    padding: 0.3% 0;
+    color:grey;
+}
+#t-shirt-right >div:last-child >div:nth-child(2) >p >strong{
+    color:black;
+}
+#t-shirt-right >div:last-child >div:nth-child(2) >p:nth-child(2)>i{
+    color:#ff3e6c;
+}
+
