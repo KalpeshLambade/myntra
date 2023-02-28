@@ -800,3 +800,83 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
     /* border: 1px solid blue; */
     font-size: 1.1vw;
 }
+
+/* // Register Page */
+#main{
+    background-color:#fceeea;
+    height:100vh;
+    width:100%;
+    border:1px solid green;
+}
+#sign-in{
+    width:30%;
+    margin: 9% auto;
+    height:75%;
+    /* border:1px solid blue; */
+}
+#sign-in-top{
+    height:30%;
+    width:100%;
+    /* border:1px solid blue; */
+    background-image:url("https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2023/2/7/59a76460-3a85-4d4b-b517-faef119c50551675792734635-offer-banner-200-600x240-code-_-MYNTRA200.jpg");
+    background-size: 100% 100%;
+}
+#sign-in-bot{
+    height:70%;
+    /* border:1px solid red; */
+    background-color: white;
+}
+#sign-in-bot >div:nth-child(1){
+    height:10%;
+    display:flex;
+    /* border:1px solid red; */
+    justify-content:left;
+    padding-left:4%;
+    align-items:center;
+}
+#sign-in-bot >div:nth-child(1) >p{
+    font-size:1.5vw;
+    font-weight:bold;
+    color:#262830;
+}
+#sign-in-bot >div:nth-child(1) >p >i{
+    font-size:1.3vw;
+    font-weight:lighter;
+    color:grey;
+}
+#sign-in-bot >div:nth-child(2){
+    height:90%;
+}
+#sign-in-bot >div:nth-child(2) >form{
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+}
+#sign-in-bot >div:nth-child(2) >form >input{
+    width:80%;
+    height:10%;
+    border:1px solid rgb(181, 180, 180);
+    outline: none;
+    background-color: transparent;
+    padding: 0 2%;
+    font-size:1.2vw;
+    border-radius:3px;
+    caret-color: red;
+}
+#sign-in-bot >div:nth-child(2) >form >input:nth-child(7){
+    width:85%;
+    background-color: #ff3e6c;
+    color:white;
+    border:none;
+    cursor: pointer;
+}
+#sign-in-bot >div:nth-child(2) >form >label{
+    font-size:0.9vw;
+    width:80%;
+    color:grey;
+}
+#sign-in-bot >div:nth-child(2) >form >label >span{
+    color:#ff3e6c;
+}
