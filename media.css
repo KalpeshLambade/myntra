@@ -1,6 +1,6 @@
 @media screen and (max-width:500px) {
     #full-page{
-        /* height:150vh; */
+        /* height:300vh; */
     }
     #navbar{
         height:5%;
@@ -212,6 +212,28 @@
     }
     .card-bot >div >p:nth-child(3),.card-bot >div >p:nth-child(2){
         font-size:2.3vw;
+    }
+    footer{
+        height:6%;
+        
+    }
+    footer >div:nth-child(1), footer >div:nth-child(2){
+        width: 100%;
+    }
+    .list >p,fieldset >div >p{
+        font-size:2vw;
+    }
+    .list >h5{
+        font-size:2.5vw;
+    }
+    #footer-btn >h5,legend{
+        font-size:2vw;
+    }
+    #assured>div:nth-child(2)>p,#assured>div:nth-child(4) >p{
+        font-size:1.8vw;
+    }
+    footer >div:nth-child(2) >div:nth-child(2) >p{
+        font-size:1.5vw;
     }
 
 

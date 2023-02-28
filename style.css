@@ -5,7 +5,7 @@
 #full-page{
     width:100%;
     height:600vh;
-    border:1px solid red;
+    border:1px solid transparent;
 }
 #navbar{
     /* border:1px solid blue; */
@@ -664,20 +664,20 @@
     color:orangered;
 }
 footer{
-    border:1px solid salmon;
+    /* border:1px solid salmon; */
     height:15%;
 }
 footer >div:nth-child(1){
     height:70%;
     width:80%;
     margin:auto;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     /* justify-content: space-between; */
     flex-wrap: wrap;
 }
 footer >div:nth-child(1) >div{
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
 }
 footer >div:nth-child(1) >div:nth-child(1){
     width :20%;
@@ -722,6 +722,7 @@ footer >div:nth-child(1) >div:nth-child(5){
     height:15%;
     text-align:center;
     margin:2% 0;
+    font-size: 1.2vw;
 }
 #footer-btn >div:nth-child(2),#footer-btn >div:nth-child(3){
     width:40%;
@@ -745,4 +746,57 @@ footer >div:nth-child(1) >div:nth-child(5){
 #footer-btn >div:nth-child(5) >div >img{
     height:100%;
     width:100%;
+}
+#assured{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1.5%;
+}
+#assured>div:nth-child(1),#assured>div:nth-child(3){
+    height: 45%;
+    width:20%;
+    /* border: 1px solid red; */
+}
+#assured>div:nth-child(1)>img,#assured>div:nth-child(3)>img{
+    height: 100%;
+    width:100%;
+}
+#assured>div:nth-child(2),#assured>div:nth-child(4){
+    height: 45%;
+    width:70%;
+    /* border: 1px solid red; */
+}
+#assured>div:nth-child(2)>p,#assured>div:nth-child(4) >p{
+    font-size: 1.2vw;
+    padding: 1%;
+}
+footer >div:nth-child(2){
+    height:30%;
+    width:80%;
+    margin:auto;
+    /* border: 1px solid blue; */
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    margin-top:1% 
+}
+legend{
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin: 1% 0;
+}
+fieldset >div >p{
+    font-size:1.2vw;
+}
+footer >div:nth-child(2) >div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+footer >div:nth-child(2) >div:nth-child(2) >p{
+    width:30%;
+    /* border: 1px solid blue; */
+    font-size: 1.1vw;
 }
