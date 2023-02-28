@@ -2,6 +2,11 @@
     margin:0;
     padding:0;
 }
+a{
+    text-decoration: none;
+    color:#262830;
+    text-align: center;
+}
 #full-page{
     width:100%;
     height:600vh;
