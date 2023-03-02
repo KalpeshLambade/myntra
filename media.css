@@ -247,7 +247,7 @@
     #sign-in-bot >div:nth-child(1) >p >i{
         font-size: 3.5vw;
     }
-    #sign-in-bot >div:nth-child(2) >form >input{
+    #sign-in-bot >div:nth-child(2) >form >input, .input-fields{
         font-size:4vw;
     }
     #sign-in-bot >div:nth-child(2) >form >label{
