@@ -776,6 +776,9 @@ footer >div:nth-child(1) >div:nth-child(5){
     font-size: 1.2vw;
     padding: 1%;
 }
+footer{
+    background-color: #fafbfc;
+}
 footer >div:nth-child(2){
     height:30%;
     width:80%;

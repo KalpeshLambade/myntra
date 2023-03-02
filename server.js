@@ -71,9 +71,6 @@ function login(event) {
       dataFromLs[i].password === userPassword
     ) {
       flag = true;
-    } else {
-      document.getElementById("name").value = "";
-      document.getElementById("password").value = "";
     }
   }
 
@@ -83,6 +80,8 @@ function login(event) {
     window.location.href = "/homepage.html";
     alert("Loged in Sucessful");
   } else {
+    document.getElementById("name").value = "";
+    document.getElementById("password").value = "";
     alert("Eamil /number / password not matched ");
   }
 }
