@@ -859,7 +859,7 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
     justify-content:space-evenly;
     align-items:center;
 }
-#sign-in-bot >div:nth-child(2) >form >input{
+.input-fields{
     width:80%;
     height:10%;
     border:1px solid rgb(181, 180, 180);
@@ -870,7 +870,7 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
     border-radius:3px;
     caret-color: red;
 }
-#sign-in-bot >div:nth-child(2) >form >input:nth-child(7){
+.submit-btn{
     width:85%;
     background-color: #ff3e6c;
     color:white;
@@ -882,6 +882,6 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
     width:80%;
     color:grey;
 }
-#sign-in-bot >div:nth-child(2) >form >label >span{
+#sign-in-bot >div:nth-child(2) >form >label >span>a, #sign-in-bot >div:nth-child(2) >form >label >span{
     color:#ff3e6c;
 }

@@ -10,7 +10,7 @@
       src="https://kit.fontawesome.com/d98822fee5.js"
       crossorigin="anonymous"
     ></script>
-    <title>Register</title>
+    <title>Log In</title>
   </head>
   <body>
     <div id="reg-full-page">
@@ -62,17 +62,31 @@
               <p>Log in <i>or</i> Page</p>
             </div>
             <div>
-                <form onsubmit="register(event)">
-                  <input type="text" id="name" class="input-fields" placeholder="Enter User Name" required/>
-                  <input type="number" id="number" class="input-fields" placeholder="+91 |   Mobile Number " required/>
-                  <input type="email" id="email" class="input-fields" placeholder="Enter Mail Id" required />
-                  <input type="password" id="password" class="input-fields" placeholder="Enter password" required/>
-                  <input type="password" id="conform-password" class="input-fields" placeholder=" conform password" required/>
-                  <label>By continuing, I agree to the <span>Terms of Use</span> & <span>Privacy Policy</span></label>
-                  <input type="submit" class="input-fields submit-btn" value="Sign Up"/>
-                  <label>Already Register? <span><a href="/login.html">Click to Log in</a></span></label>
-                </form>
-              </div>
+              <form onsubmit="login(event)">
+                <input
+                  type="text"
+                  id="name"
+                  class="input-fields"
+                  placeholder="Enter Email / Number"
+                  required
+                />
+
+                <input
+                  type="password"
+                  id="password"
+                  class="input-fields"
+                  placeholder="Enter password"
+                  required
+                />
+
+                <label
+                  >By continuing, I agree to the <span>Terms of Use</span> &
+                  <span>Privacy Policy</span></label
+                >
+                <input type="submit" value="Log In" class="input-fields submit-btn" />
+                <label>Not registered? <span><a href="/register.html">click here to sign up</a></span></label>
+              </form>
+            </div>
           </div>
         </div>
       </div>

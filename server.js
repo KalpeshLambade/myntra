@@ -28,17 +28,14 @@ function register(event) {
   if (flang) {
     alert("Email Already existed, Please enter another email");
     document.getElementById("email").value = "";
-
   } else if (userPassword.length < 8) {
     alert("password Must be greater than 8 characters");
     document.getElementById("password").value = "";
     document.getElementById("conform-password").value = "";
-
   } else if (userPassword !== conformPassword) {
     alert("Password does not match please enter similiar conform password");
     document.getElementById("password").value = "";
     document.getElementById("conform-password").value = "";
-
   } else {
     //push userdata object to localstorage temp variable
     dataFromLs.push(userData);
@@ -51,10 +48,41 @@ function register(event) {
     document.getElementById("password").value = "";
     document.getElementById("conform-password").value = "";
     //redirect to another page
-    window.location.href ="/homepage.html";
+    window.location.href = "/login.html";
     //registration alert
     alert("registration done");
   }
 
   //   console.log(dataFromLs,"dataFromLs");
+}
+
+function login(event) {
+  event.preventDefault();
+
+  var userData = document.getElementById("name").value;
+  var userPassword = document.getElementById("password").value;
+  var dataFromLs = JSON.parse(localStorage.getItem("userData"));
+
+  var flag = false;
+
+  for (var i = 0; i < dataFromLs.length; i++) {
+    if (
+      (dataFromLs[i].email === userData || dataFromLs[i].number === userData) &&
+      dataFromLs[i].password === userPassword
+    ) {
+      flag = true;
+    } else {
+      document.getElementById("name").value = "";
+      document.getElementById("password").value = "";
+    }
+  }
+
+  if (flag) {
+    document.getElementById("name").value = "";
+    document.getElementById("password").value = "";
+    window.location.href = "/homepage.html";
+    alert("Loged in Sucessful");
+  } else {
+    alert("Eamil /number / password not matched ");
+  }
 }
