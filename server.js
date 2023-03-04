@@ -86,50 +86,57 @@ function login(event) {
   }
 }
 
-function restEmail(event){
+function restEmail(event) {
   event.preventDefault();
   alert("Email verified");
 
   var dataFromLs = JSON.parse(localStorage.getItem("userData"));
   var emailFromUser = document.getElementById("email").value;
 
-  var flag =false;
+  var flag = false;
 
-  for(var i=0; i<dataFromLs.length; i++){
-    if(dataFromLs[i].email === emailFromUser){
-        flag =true;
+  for (var i = 0; i < dataFromLs.length; i++) {
+    if (dataFromLs[i].email === emailFromUser) {
+      flag = true;
     }
   }
 
-  if(flag){
+  if (flag) {
     document.getElementById("email").value = "";
-    window.location.href= "/hompage.html";
+    window.location.href = "/hompage.html";
     alert("Email verified");
-  }
-  else{
+  } else {
     document.getElementById("email").value = "";
     alert("Please Enter Register email");
   }
 }
 
-var Email;
-function reset(event){
+var gettingEmail;
+function reset(event) {
   event.preventDefault();
 
-  var userEmail =document.getElementById("email");
-  var dataFromLs =JSON.parse(localStorage.getItem("userData"));
+  var userEmail = document.getElementById("email");
+  var dataFromLs = JSON.parse(localStorage.getItem("userData"));
 
-  Email =userEmail;
+  gettingEmail = userEmail;
 
-  var flag =false;
+  var flag = false;
 
-  for(var i=0; i<dataFromLs.length; i++){
-    if(dataFromLs[i].email === userEmail){
-      flag =true;
+  for (var i = 0; i < dataFromLs.length; i++) {
+    if (dataFromLs[i].email === userEmail) {
+      flag = true;
     }
   }
 
-  if(flag){
-    
+  if (flag) {
+    var newCode = `<input type="password" class="input-fields" placeholder="Set New Password" required name="password"><button onclick="resetPass()" class="input-fields submit-btn"></button>`;
+    var divFromHtml = document.getElementById("change");
+    divFromHtml.innerHTML = newCode;
+    alert("Now Set New Password");
+  } else {
+    alert("Please Enter Register Email");
+    document.getElementById("email").value = "";
   }
 }
+
+function resetPass() {}
