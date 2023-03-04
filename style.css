@@ -855,7 +855,7 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
 #sign-in-bot >div:nth-child(2){
     height:90%;
 }
-#sign-in-bot >div:nth-child(2) >form{
+#sign-in-bot >div:nth-child(2) >form,#sign-in-bot >div:nth-child(2) >div{
     height: 100%;
     display:flex;
     flex-direction:column;
@@ -880,7 +880,7 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
     border:none;
     cursor: pointer;
 }
-#sign-in-bot >div:nth-child(2) >form >label{
+#sign-in-bot >div:nth-child(2) >form >label, .label{
     font-size:0.9vw;
     width:80%;
     color:grey;

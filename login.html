@@ -62,30 +62,21 @@
               <p>Log in <i>or</i> Page</p>
             </div>
             <div>
-              <form onsubmit="login(event)">
+              <div>
                 <input
-                  type="text"
-                  id="name"
+                  type="email"
+                  id="email"
                   class="input-fields"
-                  placeholder="Enter Email / Number"
+                  placeholder="Enter Email"
                   required
                 />
-
-                <input
-                  type="password"
-                  id="password"
-                  class="input-fields"
-                  placeholder="Enter password"
-                  required
-                />
-
-                <label
+                <label class="label"
                   >By continuing, I agree to the <span>Terms of Use</span> &
                   <span>Privacy Policy</span></label
                 >
-                <input type="submit" value="Log In" class="input-fields submit-btn" />
-                <label>Not registered? <span><a href="/register.html">click here to sign up</a></span></label>
-              </form>
+                <button onclick="reset(event)" class="input-fields submit-btn">Continue</button>
+
+              </div>
             </div>
           </div>
         </div>

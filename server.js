@@ -111,3 +111,25 @@ function restEmail(event){
     alert("Please Enter Register email");
   }
 }
+
+var Email;
+function reset(event){
+  event.preventDefault();
+
+  var userEmail =document.getElementById("email");
+  var dataFromLs =JSON.parse(localStorage.getItem("userData"));
+
+  Email =userEmail;
+
+  var flag =false;
+
+  for(var i=0; i<dataFromLs.length; i++){
+    if(dataFromLs[i].email === userEmail){
+      flag =true;
+    }
+  }
+
+  if(flag){
+    
+  }
+}
