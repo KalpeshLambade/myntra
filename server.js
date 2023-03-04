@@ -85,3 +85,29 @@ function login(event) {
     alert("Eamil /number / password not matched ");
   }
 }
+
+function restEmail(event){
+  event.preventDefault();
+  alert("Email verified");
+
+  var dataFromLs = JSON.parse(localStorage.getItem("userData"));
+  var emailFromUser = document.getElementById("email").value;
+
+  var flag =false;
+
+  for(var i=0; i<dataFromLs.length; i++){
+    if(dataFromLs[i].email === emailFromUser){
+        flag =true;
+    }
+  }
+
+  if(flag){
+    document.getElementById("email").value = "";
+    window.location.href= "/hompage.html";
+    alert("Email verified");
+  }
+  else{
+    document.getElementById("email").value = "";
+    alert("Please Enter Register email");
+  }
+}
