@@ -855,7 +855,7 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
 #sign-in-bot >div:nth-child(2){
     height:90%;
 }
-#sign-in-bot >div:nth-child(2) >form,#sign-in-bot >div:nth-child(2) >div{
+#sign-in-bot >div:nth-child(2) >form,#sign-in-bot >div:nth-child(2) >div,#change{
     height: 100%;
     display:flex;
     flex-direction:column;
@@ -885,6 +885,6 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
     width:80%;
     color:grey;
 }
-#sign-in-bot >div:nth-child(2) >form >label >span>a, #sign-in-bot >div:nth-child(2) >form >label >span{
+#sign-in-bot >div:nth-child(2) >form >label >span>a, #sign-in-bot >div:nth-child(2) >form >label >span,.label a ,span{
     color:#ff3e6c;
 }

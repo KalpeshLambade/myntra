@@ -112,10 +112,10 @@ function restEmail(event) {
 }
 
 var gettingEmail;
-function reset(event) {
+function forgotPassword(event) {
   event.preventDefault();
 
-  var userEmail = document.getElementById("email");
+  var userEmail = document.getElementById("email").value;
   var dataFromLs = JSON.parse(localStorage.getItem("userData"));
 
   gettingEmail = userEmail;
@@ -128,10 +128,18 @@ function reset(event) {
     }
   }
 
+  
   if (flag) {
-    var newCode = `<input type="password" class="input-fields" placeholder="Set New Password" required name="password"><button onclick="resetPass()" class="input-fields submit-btn"></button>`;
-    var divFromHtml = document.getElementById("change");
-    divFromHtml.innerHTML = newCode;
+    var divFromHtml =document.getElementById("change");
+    var newCode =`<input
+    type="password"
+    id="password"
+    class="input-fields"
+    placeholder="Enter New Password"
+    required
+  />
+  <button class="input-fields submit-btn" onclick="resetPass()">Reset Password</button>`;
+  divFromHtml.innerHTML=newCode;
     alert("Now Set New Password");
   } else {
     alert("Please Enter Register Email");
@@ -139,4 +147,18 @@ function reset(event) {
   }
 }
 
-function resetPass() {}
+function resetPass() {
+
+  var dataFromLs = JSON.parse(localStorage.getItem("userData"));
+  var userPassword =document.getElementById("password").value;
+
+  for(var i=0; i<dataFromLs.length; i++){
+    if(dataFromLs[i].email === gettingEmail){
+      dataFromLs[i].password = userPassword;
+    }
+  }
+
+  localStorage.setItem("userData",JSON.stringify(dataFromLs));
+  gettingEmail="";
+  document.getElementById("password").value="";
+}
