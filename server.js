@@ -160,6 +160,7 @@ function resetPass() {
 
   localStorage.setItem("userData",JSON.stringify(dataFromLs));
   gettingEmail="";
+  window.location.href="/login.html";
   document.getElementById("password").value="";
 }
 
