@@ -175,5 +175,8 @@ function addProduct(event){
   var addProduct ={name:productName, image:productImage, price:productPrice};
 
   dataFromLs.push(addProduct);
+  document.getElementById("produtName").value ="";
+  document.getElementById("productImage").value ="";
+  document.getElementById("productPrice").value ="";
   localStorage.setItem("product",JSON.stringify(dataFromLs));
 }

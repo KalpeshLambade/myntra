@@ -5,10 +5,10 @@ window.onload =function(){
     var stored =[];
 
     for(var i=0;i<dataFromLs.length; i++){
-        stored +=`<div class="card"><div class="card-top"><img src="${dataFromLs[i].image}" alt="Product-img"></div><div class="card-bot"><p>${dataFromLs[i].name}</p><div><p>${dataFromLs[i].price}</p></div></div></div>`;
+        stored +=`<div class="card"><div class="card-top"><img src="${dataFromLs[i].image}" alt="Product-img"></div><div class="card-bot"><p>${dataFromLs[i].name}</p><p>${dataFromLs[i].price}</p></div></div>`;
     }
 
-    console.log(stored);
+
     divFromHtml.innerHTML = stored;
 
 }
