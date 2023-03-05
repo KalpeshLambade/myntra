@@ -620,19 +620,20 @@ a{
     font-weight:600;
 }
 .card{
-    /* border:1px solid blue; */
-   height:9%;
+    border:1px solid blue;
+   /* height:9%; */
    display:flex;
+   flex-wrap: wrap;
    justify-content: space-evenly;
    margin: 2% 0;
 }
 .card>div{
-    /* border:1px solid red; */
+    border:1px solid red;
     width:15%;
 
 }
 .card-top{
-    /* border:1px solid magenta; */
+    border:1px solid magenta;
     height:75%;
 }
 .card-top >img{
