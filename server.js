@@ -162,3 +162,17 @@ function resetPass() {
   gettingEmail="";
   document.getElementById("password").value="";
 }
+
+function addProduct(event){
+  alert("Working");
+
+  var productName = document.getElementById("produtName").value;
+  var productImage =document.getElementById("productImage").value;
+  var productPrice=document.getElementById("productPrice").value;
+
+  var dataFromLs = JSON.parse(localStorage.getItem("product")) || [];
+  var addProduct ={name:productName, image:productImage, price:productPrice};
+
+  dataFromLs.push(addProduct);
+  localStorage.setItem("product",JSON.stringify(dataFromLs));
+}
