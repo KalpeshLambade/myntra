@@ -41,7 +41,7 @@
           <!-- ///only in mobile view -->
           <div class="none"><i class="fa-regular fa-square-plus"></i></div>
           <div class="none"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <div>
+          <div id="logout">
             <a href="/register.html">
               <i class="fa-regular fa-user"></i>
               <p>Profile</p>
@@ -728,5 +728,23 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      function check() {
+        var divFromHtml = document.getElementById("logout");
+        var dataFromLs = JSON.parse(localStorage.getItem("currentUser"));
+
+        if (dataFromLs) {
+          var newCode = `<button onclick='logout()'>Log Out</button>`;
+          divFromHtml.innerHTML = newCode;
+        }
+      }
+      check();
+      function logout() {
+        localStorage.removeItem("currentUser");
+        window.location.reload();
+        alert("Logout");
+      }
+    </script>
   </body>
 </html>

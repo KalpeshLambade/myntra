@@ -59,7 +59,7 @@ function register(event) {
 function login(event) {
   event.preventDefault();
 
-  var userData = document.getElementById("name").value;
+  var userEmail = document.getElementById("email").value;
   var userPassword = document.getElementById("password").value;
   var dataFromLs = JSON.parse(localStorage.getItem("userData"));
 
@@ -67,7 +67,7 @@ function login(event) {
 
   for (var i = 0; i < dataFromLs.length; i++) {
     if (
-      (dataFromLs[i].email === userData || dataFromLs[i].number === userData) &&
+      (dataFromLs[i].email === userEmail) &&
       dataFromLs[i].password === userPassword
     ) {
       flag = true;
@@ -75,14 +75,19 @@ function login(event) {
   }
 
   if (flag) {
-    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
     document.getElementById("password").value = "";
+
+    var user ={};
+    user["currentUserEmail"] =userEmail;
+    localStorage.setItem("currentUser",JSON.stringify(user));
+
     window.location.href = "/homepage.html";
     alert("Loged in Sucessful");
   } else {
-    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
     document.getElementById("password").value = "";
-    alert("Eamil /number / password not matched ");
+    alert("Eamil password not matched ");
   }
 }
 
@@ -180,3 +185,4 @@ function addProduct(event){
   document.getElementById("productPrice").value ="";
   localStorage.setItem("product",JSON.stringify(dataFromLs));
 }
+

@@ -62,10 +62,17 @@
               <p>Log in <i>or</i> Page</p>
             </div>
             <div>
-              <div id="change">
+              <div>
                 <input
                   type="email"
                   id="email"
+                  class="input-fields"
+                  placeholder="Enter Email"
+                  required
+                />
+                <input
+                  type="password"
+                  id="password"
                   class="input-fields"
                   placeholder="Enter Email"
                   required
@@ -74,7 +81,7 @@
                   >By continuing, I agree to the <span>Terms of Use</span> &
                   <span>Privacy Policy</span></label
                 >
-                <button onclick="reset(event)" class="input-fields submit-btn">Continue</button>
+                <button onclick="login(event)" class="input-fields submit-btn">Continue</button>
                 <label class="label" onclick="window.location.href='/rest.html'"><a><span>Forgot password</span></label>
               </div>
             </div>
@@ -84,5 +91,13 @@
     </div>
 
     <script src="/server.js"></script>
+    <script>
+      var dataFromLs =JSON.parse(localStorage.getItem("currentUser"));
+
+      if(dataFromLs){
+        alert("Already Loged in");
+        window.location.href ='homepage.html';
+      }
+    </script>
   </body>
 </html>

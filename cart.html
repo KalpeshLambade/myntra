@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Cart</title>
+
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/media.css" />
     <script
       src="https://kit.fontawesome.com/d98822fee5.js"
       crossorigin="anonymous"
     ></script>
-    <title>Register</title>
   </head>
   <body>
-    <div id="reg-full-page">
+    <div id="full-page">
       <div id="navbar">
         <div id="nav-logo">
           <img
@@ -54,38 +55,7 @@
           </div>
         </div>
       </div>
-      <div id="main">
-        <div id="sign-in">
-          <div id="sign-in-top"></div>
-          <div id="sign-in-bot">
-            <div>
-              <p>Log in <i>or</i> Page</p>
-            </div>
-            <div>
-                <form onsubmit="register(event)">
-                  <input type="text" id="name" class="input-fields" placeholder="Enter User Name" required/>
-                  <input type="number" id="number" class="input-fields" placeholder="+91 |   Mobile Number " required/>
-                  <input type="email" id="email" class="input-fields" placeholder="Enter Mail Id" required />
-                  <input type="password" id="password" class="input-fields" placeholder="Enter password" required/>
-                  <input type="password" id="conform-password" class="input-fields" placeholder=" conform password" required/>
-                  <label>By continuing, I agree to the <span>Terms of Use</span> & <span>Privacy Policy</span></label>
-                  <input type="submit" class="input-fields submit-btn" value="Sign Up"/>
-                  <label>Already Register? <span><a href="/login.html">Click to Log in</a></span></label>
-                </form>
-              </div>
-          </div>
-        </div>
-      </div>
     </div>
-
-    <script src="/server.js"></script>
-    <script>
-      var dataFromLs =JSON.parse(localStorage.getItem("currentUser"));
-
-      if(dataFromLs){
-        alert("Already Loged in");
-        window.location.href ='homepage.html';
-      }
-    </script>
+    
   </body>
 </html>
