@@ -1002,6 +1002,14 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
     width:20%;
     /* border:1px solid blue; */
 }
+.card-bot >button{
+    /* border: 1px solid red; */
+    width:50%;
+    margin:auto 25%;
+    height:30%;
+    border-radius:20px;
+    cursor:pointer;
+}
 #logout{
     /* border: 1px solid red; */
     width:60px;

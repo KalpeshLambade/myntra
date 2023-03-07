@@ -56,6 +56,13 @@
         </div>
       </div>
     </div>
-    
+    <script>
+      var dataFromLs = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (!dataFromLs) {
+        alert("Please Log in first");
+        window.location.href = "login.html";
+      }
+    </script>
   </body>
 </html>
