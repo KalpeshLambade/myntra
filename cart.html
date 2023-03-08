@@ -74,25 +74,42 @@
               </div>
             </div>
             <div class="display">
-              <div><img src="https://constant.myntassets.com/checkout/assets/img/ship-free.webp"></div><p>Yay! <strong>No convenience fee</strong> on this order.</p>
+              <div>
+                <img
+                  src="https://constant.myntassets.com/checkout/assets/img/ship-free.webp"
+                />
+              </div>
+              <p>Yay! <strong>No convenience fee</strong> on this order.</p>
             </div>
 
             <div class="display">
               <div class="display">
-                <input type="checkbox"><p>1/1 ITEMS SELECTED</p>
+                <input type="checkbox" />
+                <p>1/1 ITEMS SELECTED</p>
               </div>
               <div class="display">
                 <p>REMOVE</p>
                 <p></p>
-                <P>MOVE TO WISHTLIST</P>
+                <p>MOVE TO WISHTLIST</p>
               </div>
             </div>
 
-            <div></div>
+            <div id="displayCart">
+              <div>
+                <div><img src="" alt="productImg" /></div>
+                <div><p></p></div>
+                <div><p></p></div>
+              </div>
+            </div>
 
             <div class="display">
               <div class="display">
-                <div><img src="https://constant.myntassets.com/checkout/assets/img/products-blurred.webp" alt="icon"></div>
+                <div>
+                  <img
+                    src="https://constant.myntassets.com/checkout/assets/img/products-blurred.webp"
+                    alt="icon"
+                  />
+                </div>
                 <p>Login to see items from your existing bag and wishlist.</p>
               </div>
               <div>
@@ -114,7 +131,8 @@
 
             <div>
               <div>
-                <input type="checkbox"><p>Support Us</p>
+                <input type="checkbox" />
+                <p>Support Us</p>
               </div>
               <div>
                 <button>₹15</button>
@@ -149,7 +167,7 @@
               </div>
             </div>
             <div>
-              <button>PLACE ORDER</button>
+              <button onclick="buy()">PLACE ORDER</button>
             </div>
           </div>
         </div>
@@ -157,26 +175,129 @@
     </div>
     <div id="footer-cart">
       <div>
-        <div><img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png" alt="payment" ></div>
-        <div><img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png" alt="payment" ></div>
-        <div><img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png" alt="payment" ></div>
-        <div><img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png" alt="payment" ></div>
-        <div><img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png" alt="payment" ></div>
-        <div><img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png" alt="payment" ></div>
-        <div><img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png" alt="payment" ></div>
-        <div><img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png" alt="payment" ></div>
-        <div><img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png" alt="payment" ></div>
-        <div><img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png" alt="payment" ></div>
+        <div>
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png"
+            alt="payment"
+          />
+        </div>
+        <div>
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png"
+            alt="payment"
+          />
+        </div>
+        <div>
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png"
+            alt="payment"
+          />
+        </div>
+        <div>
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png"
+            alt="payment"
+          />
+        </div>
+        <div>
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png"
+            alt="payment"
+          />
+        </div>
+        <div>
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png"
+            alt="payment"
+          />
+        </div>
+        <div>
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png"
+            alt="payment"
+          />
+        </div>
+        <div>
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png"
+            alt="payment"
+          />
+        </div>
+        <div>
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png"
+            alt="payment"
+          />
+        </div>
+        <div>
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png"
+            alt="payment"
+          />
+        </div>
       </div>
       <div><p>Need help? Contact Us</p></div>
     </div>
 
     <script>
-      var dataFromLs = JSON.parse(localStorage.getItem("currentUser"));
+      window.onload = function () {
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-      if (!dataFromLs) {
-        alert("Please Log in first");
-        window.location.href = "login.html";
+        if (!currentUser) {
+          alert("Please Log in first");
+          window.location.href = "login.html";
+        } else {
+          var dataFromLs = JSON.parse(localStorage.getItem("userData"));
+          var divFromHtml = document.getElementById("displayCart");
+
+          var flag = false;
+          var cartProduct;
+          for (var i = 0; i < dataFromLs.length; i++) {
+            if (
+              dataFromLs[i].email === currentUser["currentUserEmail"] &&
+              dataFromLs[i].cartProduct.length >0
+            ) {
+              cartProduct =dataFromLs[i].cartProduct;
+              flag =true;
+            }
+          }
+          if(flag == false){
+            alert("noproduct added to cart, Go and buy some product");
+            window.location.href ='/displayProduct.html';
+          }
+          else{
+            var productWithHtml =[];
+            for(var i=0; i<cartProduct.length; i++){
+              productWithHtml+= `<div>
+                <div><img src="${cartProduct[i].image}" alt="productImg" /></div>
+                <div><p>${cartProduct[i].name}</p></div>
+                <div><p>₹ ${cartProduct[i].price}</p></div>
+              </div>`;
+            }
+            divFromHtml.innerHTML =productWithHtml;
+          }
+        }
+      };
+
+      function buy(){
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        var dataFromLs = JSON.parse(localStorage.getItem("userData"));
+
+        var allUser =[];
+        for (var i = 0; i < dataFromLs.length; i++) {
+            if (dataFromLs[i].email === currentUser["currentUserEmail"] && dataFromLs[i].cartProduct) {
+              dataFromLs[i].cartProduct =[];
+              allUser.push(dataFromLs[i]);
+            }
+            else{
+              allUser(dataFromLs[i]);
+            }
+          }
+
+          localStorage.setItem("userData",JSON.stringify(allUser));
+          window.location.href ='/displayProduct.html';
+          alert("Product will be delivered soon")
+
       }
     </script>
   </body>
