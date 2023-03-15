@@ -128,9 +128,9 @@ a{
 #t-shirt-right-first{
     height: 5%;
     width:100%;
-    border-bottom:1px solid grey;
-    display: flex;
-    flex-direction: column;
+    /* border:1px solid red; */
+    /* display: flex;
+    flex-direction: column; */
 }
 #t-shirt-right-first>p{
     height:25%;
@@ -151,6 +151,8 @@ a{
     font-size: 1.2vw;
     width: fit-content;
     border: 1px solid rgb(159, 155, 155);
+    /* border:1px solid blue; */
+    width: 50%;
     margin:0 2%;
     padding: 0 1%;
 }
@@ -175,8 +177,11 @@ a{
 }
 #t-shirt-right-second >div:nth-child(1) >p:nth-child(2){
     font-size:1.3vw;
+    width:30%;
     font-weight:lighter;
     color:grey;
+    display: flex;
+    justify-content: space-between;
 }
 #t-shirt-right-second >div:nth-child(1) >p:nth-child(2) >i{
     text-decoration:line-through;
@@ -188,15 +193,20 @@ a{
 #t-shirt-right-second >div:nth-child(2) >p{
     font-size:1.2vw;
     padding:1% 2%;
+    color:green;
+    font-weight: bold;
 }
 #t-shirt-right-third{
     border-bottom:1px solid grey;
-    height:6%;
+    height:8%;
     width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 #t-shirt-right-third >div:nth-child(1){
     /* border:1px solid orange; */
-    height:25%;
+    height:20%;
     width:50%;
     display:flex;
     justify-content:space-around;
@@ -210,10 +220,13 @@ a{
     font-size:1.1vw;
     font-weight:bold;
     color:#ff3e6c;  
+    display: flex;
+    justify-content: space-between;
+    width:40%;
 }
 #t-shirt-right-third >div:nth-child(2){
     /* border:1px solid blueviolet;  */
-    height:35%;
+    height:25%;
     display:flex;
     justify-content: space-around;
     align-items:center;
@@ -239,7 +252,7 @@ a{
     opacity: 0.5;
 }
 #t-shirt-right-third >div:nth-child(3){
-    height:40%;
+    height:25%;
     display:flex;
     justify-content:space-evenly;
     align-items:center;
@@ -271,7 +284,7 @@ a{
 }
 .dilivery-names, .offer-names{
     height: 10%;
-    width:35%;
+    width:80%;
     /* border:1px solid blue; */
     display:flex;
     justify-content:space-between;
@@ -622,12 +635,16 @@ a{
 .card{
     /* border:1px solid blue; */
    display:flex;
-   flex-direction: column;
    justify-content: space-evenly;
+   flex-wrap: wrap;
+   width:100%;
+   height:8%;
+   margin: 2% 0;
 }
 .card>div{
-    /* border:1px solid red; */
-    width:100%;
+    border:0.3px solid rgb(186, 181, 181);
+    width:15%;
+    height:100%;
 }
 .card-top{
     /* border:1px solid magenta; */
@@ -642,13 +659,24 @@ a{
     height:20%;
 }
 .card-bot >p{
-    font-size:1.3vw;
+    font-size:1.1vw;
     padding: 1% 0;
     text-align: center;
+    font-weight: bold;
 }
 .card-bot >p:nth-child(2){
-    font-weight:500;
+    font-weight:lighter;
     text-align: center;
+}
+.card-bot >div{
+    display: flex;
+    /* border:1px solid red; */
+    justify-content: space-evenly;
+    color:rgb(57, 56, 56);
+}
+.card-bot >div>p{
+    font-size: 1.1vw;
+    font-weight: lighter;
 }
 
 footer{
@@ -829,6 +857,8 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
     font-size:1.5vw;
     font-weight:bold;
     color:#262830;
+    /* border:1px solid blue;  */
+    width:50%;
 }
 #sign-in-bot >div:nth-child(1) >p >i{
     font-size:1.3vw;
@@ -1346,6 +1376,9 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
 .green{
     color:green;
 }
+.orange{
+    color:orange;
+}
 .cart-body-right>div:nth-child(4){
     width:95%;
     height:5%;
@@ -1417,6 +1450,48 @@ footer >div:nth-child(2) >div:nth-child(2) >p{
     height:100%;
     width:100%;
 }
+#product{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-card{
+    /* border: 1px solid blue; */
+}
+.product-card-top{
+    /* border: 1px solid red; */
+}
+.product-card-top >img{
+    width:100%;
+    height: 100%;
+}
+.product-card-bot{
+    height: 25%;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.product-card-bot >p{
+    height: 20%;
+    font-size: 1.3vw;
+}
+.product-card-bot >button{
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.product-card-bot >button:hover{
+    border: 2px solid black;
+    color: gray;
+}
+.cursor{
+    cursor: pointer;
+}
+
 
 
 

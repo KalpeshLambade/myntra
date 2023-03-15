@@ -5,7 +5,7 @@ window.onload =function(){
     var stored =[];
 
     for(var i=0;i<dataFromLs.length; i++){
-        stored +=`<div class="card"><div class="card-top"><img src="${dataFromLs[i].image}" alt="Product-img"></div><div class="card-bot"><p>${dataFromLs[i].name}</p><p>${dataFromLs[i].price}</p>
+        stored +=`<div class="product-card"><div class="product-card-top"><img src="${dataFromLs[i].image}" alt="Product-img"></div><div class="product-card-bot"><p>${dataFromLs[i].name}</p><p>₹${dataFromLs[i].price}</p>
         <button onclick='addToCart(${JSON.stringify(dataFromLs[i])})'>Add to cart</button></div></div>`;
     }
 
@@ -36,5 +36,6 @@ function addToCart(pro){
     }
     else{
         alert("Login First to Add Cart");
+        window.location.href ='/register.html';
     }
 }
