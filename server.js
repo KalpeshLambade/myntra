@@ -82,7 +82,7 @@ function login(event) {
     user["currentUserEmail"] =userEmail;
     localStorage.setItem("currentUser",JSON.stringify(user));
 
-    window.location.href = "/homepage.html";
+    window.location.href = "/index.html";
     alert("Loged in Sucessful");
   } else {
     document.getElementById("email").value = "";
